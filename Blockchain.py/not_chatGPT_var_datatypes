@@ -1,0 +1,38 @@
+class CatAge:
+    value = 11
+    valueTwo = "11.75"
+    realCatAge = float(valueTwo)
+    
+    def __int__(self):
+        return self.value
+    
+    def __str__(self):
+        return self.valueTwo
+
+num_data = CatAge()
+print("My Cat's Age =", int(num_data), "years")
+print("My Real Cat's Age = " + num_data.valueTwo + " years")
+
+class catNameString:
+    name = "Best Cat Ever"
+    
+    def __str__(self):
+        return self.name
+
+name_data = catNameString()
+print("My Cat's name is " + str(name_data) + "!")
+
+class Boolean:
+    def __init__(self):
+        self.num_data_value = CatAge()
+        self.num_data_valueTwo = CatAge()
+        self.name_data = catNameString()
+
+boolean_instance = Boolean()
+
+if boolean_instance.name_data:
+    if boolean_instance.num_data_value:
+        print("This is not my cat!")
+else:
+    print("This is my real cat named " + str(boolean_instance.name_data) + ".", 
+          "This is my real cat's age " + str(float(boolean_instance.num_data_valueTwo.valueTwo)))
